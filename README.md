@@ -71,14 +71,13 @@ Welcome to **Pinterest Clone** — a full-stack image-sharing web app inspired b
 
 > 🖼️ Add screenshots of your app below (drag and drop in GitHub after pushing):
 
-- Home Page  
-  ![Home Screenshot](#)
+![Home](screenshots/ss1.png)
 
-- Profile Page  
-  ![Profile Screenshot](#)
+### 🧑‍💼 Profile Page
+![Profile](screenshots/ss2.png)
 
-- Upload Modal  
-  ![Upload Screenshot](#)
+### ➕ Create Post Page
+![Create Post](screenshots/ss3.png)
 
 ---
 
