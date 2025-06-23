@@ -4,11 +4,7 @@ Welcome to **Pinterest Clone** — a full-stack image-sharing web app inspired b
 
 ---
 
-## 🌐 Live Demo
 
-🚧 _Coming Soon_
-
----
 
 ## ✨ Features
 
