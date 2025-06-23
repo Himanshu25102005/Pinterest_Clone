@@ -65,7 +65,6 @@ Welcome to **Pinterest Clone** — a full-stack image-sharing web app inspired b
 
 ## 📸 Screenshots
 
-> 🖼️ Add screenshots of your app below (drag and drop in GitHub after pushing):
 
 ![Home](screenshots/ss1.png)
 
