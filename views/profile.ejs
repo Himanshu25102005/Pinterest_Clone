@@ -1,0 +1,51 @@
+<% include ./partials/header.ejs %>
+    <div class="profile w-full min-h-screen bg-zinc-800 text-white pt-1">
+        <form id="uploadfile" action="/fileupload" hidden method="post" enctype="multipart/form-data">
+            <input type="file" name="image">
+        </form>
+  <div class="profdet flex flex-col items-center justify-center mt-20 relative">
+    <!-- Profile image with icon -->
+    <div class="relative">
+      <img
+        class="w-32 h-32 rounded-full object-cover border-2 border-white"
+        src="/images/uploads/<%= user.profileImage%>"
+        alt=""
+      />
+      <span id="uploadicon" class="w-8 h-8 absolute bottom-0 right-0 bg-zinc-200 rounded-full flex items-center justify-center">
+        <i class="text-zinc-800 ri-pencil-fill"></i>
+      </span>
+    </div>
+
+    <!-- Name and username -->
+    <h1 class="text-3xl font-semibold mt-4"><%= user.username%></h1>
+    <h3 class="text-md text-gray-300">@<%= user.name%></h3>
+
+    <!-- Add Post Button -->
+    <a href="/add" class="px-10 py-2 rounded-lg bg-red-700 text-xs font-semibold mt-4">Add New Post</a>
+  </div>
+
+  <!-- All Pins Section -->
+  <div class="cards flex flex-wrap gap-10 px-10 mt-10">
+    <div class="card">
+      <div class="w-65 h-50 bg-zinc-200 rounded-md overflow-hidden">
+        <img src="/images/uploads/<%= user?.posts[0]?.image %>" class="w-full h-full object-cover" alt="" />
+      </div>
+      <div class="p-2">
+        <a href="/show/posts" class="inline-block text-xl font-semibold mt-3">Your Uploaded Pins</a>
+        <h5 class="text-sm font-medium opacity-60"><%= user.posts.length%> pins</h5>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+    document.querySelector("#uploadicon").addEventListener("click", ()=>{
+        document.querySelector("#uploadfile input").click();
+    })
+
+    document.querySelector("#uploadfile input").addEventListener("change", ()=>{
+        document.querySelector("#uploadfile").submit();
+    })
+</script>
+
+    <% include ./partials/footer.ejs %>
